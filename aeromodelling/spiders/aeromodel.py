@@ -12,6 +12,7 @@ from aeromodelling.items import AeromodellingItem
 class AeromodelSpider(CrawlSpider):
     name = "aeromodel"
     allowed_domains = ["mx3g.com"]
+    download_delay = 0.25
     start_urls = (
         'http://bbs.mx3g.com/',
 #        'http://bbs.mx3g.com/forum-8-1.html',
