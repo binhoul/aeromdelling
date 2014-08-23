@@ -13,7 +13,9 @@ BOT_NAME = 'aeromodelling'
 SPIDER_MODULES = ['aeromodelling.spiders']
 NEWSPIDER_MODULE = 'aeromodelling.spiders'
 DEFAULT_ITEM_CLASS = 'aeromodelling.items.AeromodellingItem'
-ITEM_PIPELINES = ['aeromodelling.pipelines.MongoDBPipeline',]
+ITEM_PIPELINES = ['aeromodelling.pipelines.MongoDBPipeline', 'scrapy.contrib.pipeline.images.ImagesPipeline']
+
+IMAGES_STORE = '/projects/mx3g/images'
 
 #mongodb
 MONGODB_HOST = 'localhost'

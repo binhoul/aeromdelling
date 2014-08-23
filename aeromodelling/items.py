@@ -20,3 +20,6 @@ class AeromodellingItem(scrapy.Item):
     postText = Field()
     repostCount = Field()
 
+class ImageItem(scrapy.Item):
+   imgUrl = Field()
+   images = Field()

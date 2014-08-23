@@ -42,5 +42,5 @@ class AeromodelSpider(CrawlSpider):
         item['repostCount'] = response.xpath('//div[@class="hm"]/span[@class="xi1"]/text()')[1].extract()
         postlist = response.xpath('//div[@id="postlist"]/div[starts-with(@id, "post_")]/@id').extract()
         xpathrule = '//div[starts-with(@id, "%s")]/descendant::td[starts-with(@id, "postmessage_")]/text()' %(postlist[0])
-#item['postText'] = response.xpath(xpathrule).extract()
+        item['postText'] = response.xpath(xpathrule).extract()
         return item
